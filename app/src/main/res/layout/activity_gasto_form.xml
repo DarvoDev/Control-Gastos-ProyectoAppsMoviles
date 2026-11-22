@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Formulario para crear / editar un gasto -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fondo"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context=".activities.GastoFormActivity">
+
+    <!-- Barra superior -->
+    <LinearLayout style="@style/BarraSuperior">
+
+        <ImageView
+            android:id="@+id/btnAtras"
+            style="@style/IconoAccion"
+            android:contentDescription="@string/desc_atras"
+            android:src="@drawable/ic_atras" />
+
+        <TextView
+            android:id="@+id/txtTituloForm"
+            style="@style/TituloBarra"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="@string/form_titulo_nuevo" />
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/margen_pantalla">
+
+            <!-- Tarjeta del monto -->
+            <LinearLayout
+                style="@style/Tarjeta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:paddingTop="@dimen/espacio_grande"
+                android:paddingBottom="@dimen/espacio_grande">
+
+                <TextView
+                    style="@style/TextoSeccion"
+                    android:text="@string/form_monto"
+                    android:textColor="@color/texto_secundario" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/espacio_chico"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/simbolo_moneda"
+                        android:textColor="?attr/colorPrimary"
+                        android:textSize="32sp"
+                        android:textStyle="bold" />
+
+                    <EditText
+                        android:id="@+id/etMonto"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:background="@android:color/transparent"
+                        android:hint="@string/hint_monto"
+                        android:importantForAutofill="no"
+                        android:inputType="numberDecimal"
+                        android:minWidth="120dp"
+                        android:textColor="@color/texto_principal"
+                        android:textColorHint="@color/texto_secundario"
+                        android:textSize="44sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- Descripción -->
+            <TextView
+                style="@style/TextoEtiqueta"
+                android:layout_marginTop="@dimen/espacio_grande"
+                android:text="@string/etiqueta_descripcion" />
+
+            <EditText
+                android:id="@+id/etDescripcion"
+                style="@style/CampoTexto"
+                android:drawableStart="@drawable/ic_editar"
+                android:hint="@string/hint_descripcion"
+                android:inputType="textCapSentences" />
+
+            <!-- Categoría -->
+            <TextView
+                style="@style/TextoEtiqueta"
+                android:layout_marginTop="@dimen/espacio_medio"
+                android:text="@string/etiqueta_categoria" />
+
+            <Spinner
+                android:id="@+id/spCategoria"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/alto_input"
+                android:background="@drawable/bg_input"
+                android:entries="@array/categorias"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp" />
+
+            <!-- Fecha (al tocar se abrirá un DatePickerDialog) -->
+            <TextView
+                style="@style/TextoEtiqueta"
+                android:layout_marginTop="@dimen/espacio_medio"
+                android:text="@string/etiqueta_fecha" />
+
+            <TextView
+                android:id="@+id/txtFecha"
+                style="@style/CampoTexto"
+                android:clickable="true"
+                android:drawableStart="@drawable/ic_calendario"
+                android:focusable="true"
+                android:foreground="?attr/selectableItemBackground"
+                android:gravity="center_vertical"
+                android:text="@string/form_fecha_ejemplo" />
+
+            <Button
+                android:id="@+id/btnGuardar"
+                style="@style/BotonPrincipal"
+                android:layout_marginTop="32dp"
+                android:text="@string/btn_guardar_gasto" />
+
+            <!-- Solo visible en modo edición -->
+            <Button
+                android:id="@+id/btnEliminar"
+                style="@style/BotonPrincipal"
+                android:layout_marginTop="@dimen/espacio_chico"
+                android:backgroundTint="@color/rojo"
+                android:text="@string/btn_eliminar_gasto"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

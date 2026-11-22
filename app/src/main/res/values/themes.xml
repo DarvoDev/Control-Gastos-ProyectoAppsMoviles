@@ -1,0 +1,57 @@
+<resources>
+    <!-- Tema base de la aplicación (DayNight: cambia solo con modo claro / oscuro) -->
+    <style name="Base.Theme.ControlGastos" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/tema_azul</item>
+        <item name="colorOnPrimary">@color/blanco</item>
+        <item name="colorSecondary">@color/tema_azul</item>
+        <item name="colorAccent">@color/tema_azul</item>
+        <item name="colorControlActivated">?attr/colorPrimary</item>
+        <item name="android:colorBackground">@color/fondo</item>
+        <item name="android:windowBackground">@color/fondo</item>
+        <item name="colorSurface">@color/superficie</item>
+        <item name="colorOnSurface">@color/texto_principal</item>
+        <item name="colorError">@color/error</item>
+        <item name="android:textColorPrimary">@color/texto_principal</item>
+        <item name="android:textColorSecondary">@color/texto_secundario</item>
+        <item name="android:windowLightStatusBar">@bool/barra_estado_clara</item>
+    </style>
+
+    <style name="Theme.ControlGastos" parent="Base.Theme.ControlGastos" />
+
+    <!-- Variantes de color principal (se aplicarán desde Java con setTheme) -->
+    <style name="Theme.ControlGastos.Azul" parent="Base.Theme.ControlGastos">
+        <item name="colorPrimary">@color/tema_azul</item>
+        <item name="colorSecondary">@color/tema_azul</item>
+        <item name="colorAccent">@color/tema_azul</item>
+    </style>
+
+    <style name="Theme.ControlGastos.VerdeAzulado" parent="Base.Theme.ControlGastos">
+        <item name="colorPrimary">@color/tema_verde_azulado</item>
+        <item name="colorSecondary">@color/tema_verde_azulado</item>
+        <item name="colorAccent">@color/tema_verde_azulado</item>
+    </style>
+
+    <style name="Theme.ControlGastos.Indigo" parent="Base.Theme.ControlGastos">
+        <item name="colorPrimary">@color/tema_indigo</item>
+        <item name="colorSecondary">@color/tema_indigo</item>
+        <item name="colorAccent">@color/tema_indigo</item>
+    </style>
+
+    <style name="Theme.ControlGastos.Verde" parent="Base.Theme.ControlGastos">
+        <item name="colorPrimary">@color/tema_verde</item>
+        <item name="colorSecondary">@color/tema_verde</item>
+        <item name="colorAccent">@color/tema_verde</item>
+    </style>
+
+    <style name="Theme.ControlGastos.Naranja" parent="Base.Theme.ControlGastos">
+        <item name="colorPrimary">@color/tema_naranja</item>
+        <item name="colorSecondary">@color/tema_naranja</item>
+        <item name="colorAccent">@color/tema_naranja</item>
+    </style>
+
+    <style name="Theme.ControlGastos.Morado" parent="Base.Theme.ControlGastos">
+        <item name="colorPrimary">@color/tema_morado</item>
+        <item name="colorSecondary">@color/tema_morado</item>
+        <item name="colorAccent">@color/tema_morado</item>
+    </style>
+</resources>

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Inicio de sesión: correo + contraseña -->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fondo"
+    android:fillViewport="true"
+    android:fitsSystemWindows="true"
+    tools:context=".activities.LoginActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="@dimen/margen_pantalla">
+
+        <!-- Encabezado: logo, nombre y subtítulo -->
+        <ImageView
+            android:id="@+id/imgLogo"
+            android:layout_width="96dp"
+            android:layout_height="96dp"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/bg_circulo_primario"
+            android:contentDescription="@string/desc_logo"
+            android:padding="22dp"
+            android:src="@drawable/ic_cartera"
+            app:tint="@color/blanco" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/espacio_medio"
+            android:text="@string/app_name"
+            android:textColor="@color/texto_principal"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="@string/login_subtitulo"
+            android:textColor="@color/texto_secundario"
+            android:textSize="16sp" />
+
+        <!-- Tarjeta con el formulario -->
+        <LinearLayout
+            style="@style/Tarjeta"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/TextoEtiqueta"
+                android:text="@string/etiqueta_correo" />
+
+            <EditText
+                android:id="@+id/etCorreo"
+                style="@style/CampoTexto"
+                android:drawableStart="@drawable/ic_correo"
+                android:hint="@string/hint_correo"
+                android:inputType="textEmailAddress" />
+
+            <TextView
+                style="@style/TextoEtiqueta"
+                android:layout_marginTop="@dimen/espacio_medio"
+                android:text="@string/etiqueta_contrasena" />
+
+            <EditText
+                android:id="@+id/etContrasena"
+                style="@style/CampoTexto"
+                android:drawableStart="@drawable/ic_candado"
+                android:hint="@string/hint_contrasena"
+                android:inputType="textPassword" />
+
+            <Button
+                android:id="@+id/btnIniciarSesion"
+                style="@style/BotonPrincipal"
+                android:layout_marginTop="@dimen/espacio_grande"
+                android:text="@string/btn_iniciar_sesion" />
+
+        </LinearLayout>
+
+        <!-- Enlace a registro -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/espacio_grande"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/login_sin_cuenta"
+                android:textColor="@color/texto_secundario"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/txtIrRegistro"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="?attr/selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true"
+                android:padding="6dp"
+                android:text="@string/login_registrate"
+                android:textColor="?attr/colorPrimary"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

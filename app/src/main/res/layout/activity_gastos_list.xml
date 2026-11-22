@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Lista completa de gastos con filtros por mes y categoría -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fondo"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context=".activities.GastosListActivity">
+
+    <!-- Barra superior -->
+    <LinearLayout style="@style/BarraSuperior">
+
+        <ImageView
+            android:id="@+id/btnAtras"
+            style="@style/IconoAccion"
+            android:contentDescription="@string/desc_atras"
+            android:src="@drawable/ic_atras" />
+
+        <TextView
+            style="@style/TituloBarra"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_weight="1"
+            android:text="@string/lista_titulo" />
+
+        <ImageView
+            android:id="@+id/btnAgregar"
+            style="@style/IconoAccion"
+            android:contentDescription="@string/desc_agregar"
+            android:src="@drawable/ic_agregar" />
+
+    </LinearLayout>
+
+    <!-- Filtros -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingStart="@dimen/margen_pantalla"
+        android:paddingTop="@dimen/espacio_medio"
+        android:paddingEnd="@dimen/margen_pantalla">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="6dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/TextoEtiqueta"
+                android:text="@string/etiqueta_mes" />
+
+            <Spinner
+                android:id="@+id/spMes"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@drawable/bg_input"
+                android:entries="@array/meses"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/TextoEtiqueta"
+                android:text="@string/etiqueta_categoria" />
+
+            <Spinner
+                android:id="@+id/spCategoria"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@drawable/bg_input"
+                android:entries="@array/filtro_categorias"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- Total de los gastos filtrados -->
+    <LinearLayout
+        style="@style/Tarjeta"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margen_pantalla"
+        android:layout_marginTop="@dimen/espacio_medio"
+        android:layout_marginEnd="@dimen/margen_pantalla"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="@dimen/espacio_medio">
+
+        <TextView
+            style="@style/TextoSeccion"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="@string/lista_total"
+            android:textColor="@color/texto_secundario" />
+
+        <TextView
+            android:id="@+id/txtTotalFiltrado"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/main_monto_ejemplo"
+            android:textColor="?attr/colorPrimary"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <!-- Lista + mensaje de lista vacía -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <ListView
+            android:id="@+id/listGastos"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            android:divider="@null"
+            android:dividerHeight="0dp"
+            android:padding="@dimen/margen_pantalla"
+            tools:listitem="@layout/item_gasto" />
+
+        <TextView
+            android:id="@+id/txtVacio"
+            style="@style/TextoSubtitulo"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:padding="@dimen/margen_pantalla"
+            android:text="@string/sin_gastos"
+            android:visibility="gone" />
+
+    </FrameLayout>
+
+</LinearLayout>

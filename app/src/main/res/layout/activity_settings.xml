@@ -1,0 +1,595 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Ajustes: color del tema, modo oscuro, presupuesto, notificaciones, almacenamiento y cuenta -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fondo"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical"
+    tools:context=".activities.SettingsActivity">
+
+    <!-- Barra superior -->
+    <LinearLayout style="@style/BarraSuperior">
+
+        <ImageView
+            android:id="@+id/btnAtras"
+            style="@style/IconoAccion"
+            android:contentDescription="@string/desc_atras"
+            android:src="@drawable/ic_atras" />
+
+        <TextView
+            style="@style/TituloBarra"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="@string/ajustes_titulo" />
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/margen_pantalla">
+
+            <!-- ===================== APARIENCIA ===================== -->
+            <TextView
+                style="@style/TextoSeccion"
+                android:layout_marginBottom="@dimen/espacio_chico"
+                android:text="@string/ajustes_apariencia" />
+
+            <LinearLayout
+                style="@style/Tarjeta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/TextoTitulo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/ajustes_color" />
+
+                <TextView
+                    style="@style/TextoSubtitulo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/ajustes_color_sub" />
+
+                <!-- Selector de color: cada círculo es un FrameLayout con su check -->
+                <LinearLayout
+                    android:id="@+id/layoutColores"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:orientation="horizontal">
+
+                <FrameLayout
+                    android:id="@+id/colorAzul"
+                    android:layout_width="@dimen/tamano_color"
+                    android:layout_height="@dimen/tamano_color"
+                    android:background="@drawable/bg_color"
+                    android:backgroundTint="@color/tema_azul"
+                    android:clickable="true"
+                    android:focusable="true">
+
+                    <ImageView
+                        android:id="@+id/checkAzul"
+                        android:layout_width="22dp"
+                        android:layout_height="22dp"
+                        android:layout_gravity="center"
+                        android:contentDescription="@string/desc_icono"
+                        android:src="@drawable/ic_check"
+                        android:visibility="visible"
+                        app:tint="@color/blanco" />
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/colorVerdeAzulado"
+                    android:layout_width="@dimen/tamano_color"
+                    android:layout_height="@dimen/tamano_color"
+                    android:layout_marginStart="10dp"
+                    android:background="@drawable/bg_color"
+                    android:backgroundTint="@color/tema_verde_azulado"
+                    android:clickable="true"
+                    android:focusable="true">
+
+                    <ImageView
+                        android:id="@+id/checkVerdeAzulado"
+                        android:layout_width="22dp"
+                        android:layout_height="22dp"
+                        android:layout_gravity="center"
+                        android:contentDescription="@string/desc_icono"
+                        android:src="@drawable/ic_check"
+                        android:visibility="gone"
+                        app:tint="@color/blanco" />
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/colorIndigo"
+                    android:layout_width="@dimen/tamano_color"
+                    android:layout_height="@dimen/tamano_color"
+                    android:layout_marginStart="10dp"
+                    android:background="@drawable/bg_color"
+                    android:backgroundTint="@color/tema_indigo"
+                    android:clickable="true"
+                    android:focusable="true">
+
+                    <ImageView
+                        android:id="@+id/checkIndigo"
+                        android:layout_width="22dp"
+                        android:layout_height="22dp"
+                        android:layout_gravity="center"
+                        android:contentDescription="@string/desc_icono"
+                        android:src="@drawable/ic_check"
+                        android:visibility="gone"
+                        app:tint="@color/blanco" />
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/colorVerde"
+                    android:layout_width="@dimen/tamano_color"
+                    android:layout_height="@dimen/tamano_color"
+                    android:layout_marginStart="10dp"
+                    android:background="@drawable/bg_color"
+                    android:backgroundTint="@color/tema_verde"
+                    android:clickable="true"
+                    android:focusable="true">
+
+                    <ImageView
+                        android:id="@+id/checkVerde"
+                        android:layout_width="22dp"
+                        android:layout_height="22dp"
+                        android:layout_gravity="center"
+                        android:contentDescription="@string/desc_icono"
+                        android:src="@drawable/ic_check"
+                        android:visibility="gone"
+                        app:tint="@color/blanco" />
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/colorNaranja"
+                    android:layout_width="@dimen/tamano_color"
+                    android:layout_height="@dimen/tamano_color"
+                    android:layout_marginStart="10dp"
+                    android:background="@drawable/bg_color"
+                    android:backgroundTint="@color/tema_naranja"
+                    android:clickable="true"
+                    android:focusable="true">
+
+                    <ImageView
+                        android:id="@+id/checkNaranja"
+                        android:layout_width="22dp"
+                        android:layout_height="22dp"
+                        android:layout_gravity="center"
+                        android:contentDescription="@string/desc_icono"
+                        android:src="@drawable/ic_check"
+                        android:visibility="gone"
+                        app:tint="@color/blanco" />
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/colorMorado"
+                    android:layout_width="@dimen/tamano_color"
+                    android:layout_height="@dimen/tamano_color"
+                    android:layout_marginStart="10dp"
+                    android:background="@drawable/bg_color"
+                    android:backgroundTint="@color/tema_morado"
+                    android:clickable="true"
+                    android:focusable="true">
+
+                    <ImageView
+                        android:id="@+id/checkMorado"
+                        android:layout_width="22dp"
+                        android:layout_height="22dp"
+                        android:layout_gravity="center"
+                        android:contentDescription="@string/desc_icono"
+                        android:src="@drawable/ic_check"
+                        android:visibility="gone"
+                        app:tint="@color/blanco" />
+
+                </FrameLayout>
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="@dimen/espacio_medio"
+                    android:layout_marginBottom="@dimen/espacio_medio"
+                    android:background="@color/divisor" />
+
+                <!-- Modo oscuro -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/TextoTitulo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/ajustes_modo_oscuro" />
+
+                        <TextView
+                            style="@style/TextoSubtitulo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/ajustes_modo_oscuro_sub" />
+
+                    </LinearLayout>
+
+                    <Switch
+                        android:id="@+id/swModoOscuro"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- ===================== PREFERENCIAS ===================== -->
+            <TextView
+                style="@style/TextoSeccion"
+                android:layout_marginTop="@dimen/espacio_grande"
+                android:layout_marginBottom="@dimen/espacio_chico"
+                android:text="@string/ajustes_preferencias" />
+
+            <LinearLayout
+                style="@style/Tarjeta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/TextoTitulo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/ajustes_presupuesto" />
+
+                <TextView
+                    style="@style/TextoSubtitulo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/ajustes_presupuesto_sub" />
+
+                <!-- Campo de presupuesto con prefijo $ -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/alto_input"
+                    android:layout_marginTop="12dp"
+                    android:background="@drawable/bg_input"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/simbolo_moneda"
+                        android:textColor="@color/texto_secundario"
+                        android:textSize="16sp" />
+
+                    <EditText
+                        android:id="@+id/etPresupuesto"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="8dp"
+                        android:layout_weight="1"
+                        android:background="@android:color/transparent"
+                        android:hint="@string/hint_presupuesto"
+                        android:importantForAutofill="no"
+                        android:inputType="numberDecimal"
+                        android:textColor="@color/texto_principal"
+                        android:textColorHint="@color/texto_secundario"
+                        android:textSize="16sp" />
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:contentDescription="@string/desc_icono"
+                        android:src="@drawable/ic_editar"
+                        app:tint="@color/texto_secundario" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- ===================== NOTIFICACIONES ===================== -->
+            <TextView
+                style="@style/TextoSeccion"
+                android:layout_marginTop="@dimen/espacio_grande"
+                android:layout_marginBottom="@dimen/espacio_chico"
+                android:text="@string/ajustes_notificaciones" />
+
+            <LinearLayout
+                style="@style/Tarjeta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!-- Recordatorio diario -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/TextoTitulo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/ajustes_recordatorio" />
+
+                        <TextView
+                            style="@style/TextoSubtitulo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/ajustes_recordatorio_sub" />
+
+                    </LinearLayout>
+
+                    <Switch
+                        android:id="@+id/swRecordatorio"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+                <!-- Hora del recordatorio (al tocar se abrirá un TimePickerDialog) -->
+                <LinearLayout
+                    android:id="@+id/layoutHora"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/alto_input"
+                    android:layout_marginTop="12dp"
+                    android:background="@drawable/bg_input"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:contentDescription="@string/desc_icono"
+                        android:src="@drawable/ic_reloj"
+                        app:tint="@color/texto_secundario" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:layout_weight="1"
+                        android:text="@string/ajustes_hora"
+                        android:textColor="@color/texto_principal"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/txtHora"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/ajustes_hora_ejemplo"
+                        android:textColor="?attr/colorPrimary"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="@dimen/espacio_medio"
+                    android:layout_marginBottom="@dimen/espacio_medio"
+                    android:background="@color/divisor" />
+
+                <!-- Alerta de presupuesto -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/TextoTitulo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/ajustes_alerta" />
+
+                        <TextView
+                            style="@style/TextoSubtitulo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/ajustes_alerta_sub" />
+
+                    </LinearLayout>
+
+                    <Switch
+                        android:id="@+id/swAlertaPresupuesto"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- ===================== ALMACENAMIENTO ===================== -->
+            <TextView
+                style="@style/TextoSeccion"
+                android:layout_marginTop="@dimen/espacio_grande"
+                android:layout_marginBottom="@dimen/espacio_chico"
+                android:text="@string/ajustes_almacenamiento" />
+
+            <LinearLayout
+                style="@style/Tarjeta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/TextoSubtitulo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/ajustes_almacenamiento_sub" />
+
+                <RadioGroup
+                    android:id="@+id/rgAlmacenamiento"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/espacio_chico"
+                    android:checkedButton="@id/rbSqlite"
+                    android:orientation="vertical">
+
+                    <RadioButton
+                        android:id="@+id/rbSqlite"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/ajustes_sqlite"
+                        android:textColor="@color/texto_principal"
+                        android:textSize="15sp" />
+
+                    <RadioButton
+                        android:id="@+id/rbArchivo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/ajustes_archivo"
+                        android:textColor="@color/texto_principal"
+                        android:textSize="15sp" />
+
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <!-- ===================== CUENTA ===================== -->
+            <TextView
+                style="@style/TextoSeccion"
+                android:layout_marginTop="@dimen/espacio_grande"
+                android:layout_marginBottom="@dimen/espacio_chico"
+                android:text="@string/ajustes_cuenta" />
+
+            <LinearLayout
+                style="@style/Tarjeta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:background="@drawable/bg_circulo_primario"
+                        android:contentDescription="@string/desc_perfil"
+                        android:padding="12dp"
+                        android:src="@drawable/ic_persona"
+                        app:tint="@color/blanco" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="14dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/txtNombreUsuario"
+                            style="@style/TextoTitulo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/usuario_nombre_ejemplo"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/txtCorreoUsuario"
+                            style="@style/TextoSubtitulo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/usuario_correo_ejemplo" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!-- Cerrar sesión (contenedor clickeable) -->
+                <LinearLayout
+                    android:id="@+id/btnCerrarSesion"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/alto_boton"
+                    android:layout_marginTop="@dimen/espacio_medio"
+                    android:background="@drawable/bg_input"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="22dp"
+                        android:layout_height="22dp"
+                        android:contentDescription="@string/desc_icono"
+                        android:src="@drawable/ic_cerrar_sesion"
+                        app:tint="@color/error" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:text="@string/ajustes_cerrar_sesion"
+                        android:textColor="@color/error"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <TextView
+                style="@style/TextoSubtitulo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/espacio_grande"
+                android:gravity="center"
+                android:text="@string/ajustes_version" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

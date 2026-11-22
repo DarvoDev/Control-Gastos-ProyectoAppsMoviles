@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Colores semánticos (modo oscuro) -->
+    <color name="fondo">#111417</color>
+    <color name="superficie">#1C2024</color>
+    <color name="superficie_variante">#272C31</color>
+    <color name="texto_principal">#E2E2E6</color>
+    <color name="texto_secundario">#A8ADB3</color>
+    <color name="divisor">#33383D</color>
+    <color name="error">#FFB4AB</color>
+    <color name="exito">#81C784</color>
+</resources>

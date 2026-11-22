@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Registro de usuario: nombre, correo, contraseña y confirmación -->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fondo"
+    android:fillViewport="true"
+    android:fitsSystemWindows="true"
+    tools:context=".activities.RegisterActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="@dimen/margen_pantalla">
+
+        <!-- Encabezado -->
+        <ImageView
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:layout_marginTop="@dimen/espacio_medio"
+            android:background="@drawable/bg_circulo_primario"
+            android:contentDescription="@string/desc_logo"
+            android:padding="18dp"
+            android:src="@drawable/ic_cartera"
+            app:tint="@color/blanco" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/espacio_medio"
+            android:text="@string/registro_titulo"
+            android:textColor="@color/texto_principal"
+            android:textSize="28sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:gravity="center"
+            android:text="@string/registro_subtitulo"
+            android:textColor="@color/texto_secundario"
+            android:textSize="15sp" />
+
+        <!-- Tarjeta con el formulario -->
+        <LinearLayout
+            style="@style/Tarjeta"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/espacio_grande"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/TextoEtiqueta"
+                android:text="@string/etiqueta_nombre" />
+
+            <EditText
+                android:id="@+id/etNombre"
+                style="@style/CampoTexto"
+                android:drawableStart="@drawable/ic_persona"
+                android:hint="@string/hint_nombre"
+                android:inputType="textPersonName|textCapWords" />
+
+            <TextView
+                style="@style/TextoEtiqueta"
+                android:layout_marginTop="@dimen/espacio_medio"
+                android:text="@string/etiqueta_correo" />
+
+            <EditText
+                android:id="@+id/etCorreo"
+                style="@style/CampoTexto"
+                android:drawableStart="@drawable/ic_correo"
+                android:hint="@string/hint_correo"
+                android:inputType="textEmailAddress" />
+
+            <TextView
+                style="@style/TextoEtiqueta"
+                android:layout_marginTop="@dimen/espacio_medio"
+                android:text="@string/etiqueta_contrasena" />
+
+            <EditText
+                android:id="@+id/etContrasena"
+                style="@style/CampoTexto"
+                android:drawableStart="@drawable/ic_candado"
+                android:hint="@string/hint_contrasena_nueva"
+                android:inputType="textPassword" />
+
+            <TextView
+                style="@style/TextoEtiqueta"
+                android:layout_marginTop="@dimen/espacio_medio"
+                android:text="@string/etiqueta_confirmar" />
+
+            <EditText
+                android:id="@+id/etConfirmar"
+                style="@style/CampoTexto"
+                android:drawableStart="@drawable/ic_candado"
+                android:hint="@string/hint_confirmar"
+                android:inputType="textPassword" />
+
+            <!-- Aviso de privacidad -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/espacio_medio"
+                android:background="@drawable/bg_chip"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="12dp">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:contentDescription="@string/desc_icono"
+                    android:src="@drawable/ic_candado"
+                    app:tint="?attr/colorPrimary" />
+
+                <TextView
+                    style="@style/TextoSubtitulo"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:layout_weight="1"
+                    android:text="@string/registro_aviso" />
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnRegistrar"
+                style="@style/BotonPrincipal"
+                android:layout_marginTop="@dimen/espacio_grande"
+                android:text="@string/btn_crear_cuenta" />
+
+        </LinearLayout>
+
+        <!-- Enlace a login -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/espacio_medio"
+            android:layout_marginBottom="@dimen/espacio_medio"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/registro_con_cuenta"
+                android:textColor="@color/texto_secundario"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/txtIrLogin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="?attr/selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true"
+                android:padding="6dp"
+                android:text="@string/registro_inicia"
+                android:textColor="?attr/colorPrimary"
+                android:textSize="15sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

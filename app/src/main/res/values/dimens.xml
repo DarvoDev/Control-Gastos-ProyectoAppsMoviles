@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="margen_pantalla">20dp</dimen>
+    <dimen name="espacio_chico">8dp</dimen>
+    <dimen name="espacio_medio">16dp</dimen>
+    <dimen name="espacio_grande">24dp</dimen>
+    <dimen name="padding_tarjeta">20dp</dimen>
+    <dimen name="alto_input">52dp</dimen>
+    <dimen name="alto_boton">52dp</dimen>
+    <dimen name="alto_barra">64dp</dimen>
+    <dimen name="tamano_icono">24dp</dimen>
+    <dimen name="tamano_avatar">40dp</dimen>
+    <dimen name="tamano_color">40dp</dimen>
+    <dimen name="tamano_fab">60dp</dimen>
+</resources>

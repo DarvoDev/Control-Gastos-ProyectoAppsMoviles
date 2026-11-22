@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Colores semánticos (modo claro). Las variantes oscuras están en values-night/colors.xml -->
+    <color name="fondo">#F5F7FA</color>
+    <color name="superficie">#FFFFFF</color>
+    <color name="superficie_variante">#EEF1F5</color>
+    <color name="texto_principal">#1A1C1E</color>
+    <color name="texto_secundario">#5F6368</color>
+    <color name="divisor">#DDE1E6</color>
+    <color name="error">#BA1A1A</color>
+    <color name="exito">#2E7D32</color>
+    <color name="blanco">#FFFFFF</color>
+    <color name="rojo">#C62828</color>
+
+    <!-- Colores principales disponibles para el selector de tema (Ajustes) -->
+    <color name="tema_azul">#1565C0</color>
+    <color name="tema_verde_azulado">#00796B</color>
+    <color name="tema_indigo">#3949AB</color>
+    <color name="tema_verde">#2E7D32</color>
+    <color name="tema_naranja">#EF6C00</color>
+    <color name="tema_morado">#7B1FA2</color>
+</resources>

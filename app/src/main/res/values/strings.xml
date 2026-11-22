@@ -1,0 +1,146 @@
+<resources>
+    <string name="app_name">Control de Gastos</string>
+    <string name="app_lema">Controla tus gastos sin complicaciones</string>
+
+    <!-- Comunes -->
+    <string name="desc_logo">Logo de la aplicación</string>
+    <string name="desc_atras">Regresar</string>
+    <string name="desc_ajustes">Ajustes</string>
+    <string name="desc_perfil">Perfil</string>
+    <string name="desc_agregar">Agregar gasto</string>
+    <string name="desc_icono">Icono</string>
+    <string name="simbolo_moneda">$</string>
+
+    <!-- Login -->
+    <string name="login_subtitulo">Inicia sesión para continuar</string>
+    <string name="etiqueta_correo">Correo electrónico</string>
+    <string name="hint_correo">tucorreo@ejemplo.com</string>
+    <string name="etiqueta_contrasena">Contraseña</string>
+    <string name="hint_contrasena">Ingresa tu contraseña</string>
+    <string name="btn_iniciar_sesion">Iniciar sesión</string>
+    <string name="login_sin_cuenta">¿No tienes cuenta?</string>
+    <string name="login_registrate">Regístrate</string>
+
+    <!-- Registro -->
+    <string name="registro_titulo">Crear cuenta</string>
+    <string name="registro_subtitulo">Empieza a registrar tus gastos y cuida tu presupuesto</string>
+    <string name="etiqueta_nombre">Nombre</string>
+    <string name="hint_nombre">Tu nombre</string>
+    <string name="hint_contrasena_nueva">Mínimo 6 caracteres</string>
+    <string name="etiqueta_confirmar">Confirmar contraseña</string>
+    <string name="hint_confirmar">Repite tu contraseña</string>
+    <string name="registro_aviso">Tus datos se guardan solo en este dispositivo y tu contraseña se almacena cifrada.</string>
+    <string name="btn_crear_cuenta">Crear cuenta</string>
+    <string name="registro_con_cuenta">¿Ya tienes cuenta?</string>
+    <string name="registro_inicia">Inicia sesión</string>
+
+    <!-- Inicio (dashboard) -->
+    <string name="main_saludo">Hola, Usuario</string>
+    <string name="main_titulo">Resumen del mes</string>
+    <string name="main_total_mes">Total este mes</string>
+    <string name="main_mes_ejemplo">Noviembre 2026</string>
+    <string name="main_monto_ejemplo">$850.00</string>
+    <string name="main_restante_ejemplo">$150.00 restante</string>
+    <string name="main_presupuesto_ejemplo">de $1,000.00</string>
+    <string name="main_ver_gastos">Mis gastos</string>
+    <string name="main_ver_gastos_sub">Lista completa</string>
+    <string name="main_resumen">Resumen</string>
+    <string name="main_resumen_sub">Por categoría</string>
+    <string name="main_recientes">Gastos recientes</string>
+    <string name="main_ver_todos">Ver todos</string>
+    <string name="sin_gastos">Aún no tienes gastos registrados</string>
+
+    <!-- Formulario de gasto -->
+    <string name="form_titulo_nuevo">Nuevo gasto</string>
+    <string name="form_monto">Monto total</string>
+    <string name="hint_monto">0.00</string>
+    <string name="etiqueta_descripcion">Descripción</string>
+    <string name="hint_descripcion">Ej. Supermercado, cafetería, gasolina</string>
+    <string name="etiqueta_categoria">Categoría</string>
+    <string name="etiqueta_fecha">Fecha</string>
+    <string name="form_fecha_ejemplo">Hoy, 22 de noviembre</string>
+    <string name="btn_guardar_gasto">Guardar gasto</string>
+    <string name="btn_eliminar_gasto">Eliminar gasto</string>
+
+    <!-- Lista de gastos -->
+    <string name="lista_titulo">Mis gastos</string>
+    <string name="etiqueta_mes">Mes</string>
+    <string name="lista_total">Total</string>
+
+    <!-- Resumen -->
+    <string name="resumen_titulo">Resumen por categoría</string>
+    <string name="resumen_total">Total gastado</string>
+
+    <!-- Ajustes -->
+    <string name="ajustes_titulo">Configuración</string>
+    <string name="ajustes_apariencia">Apariencia</string>
+    <string name="ajustes_color">Color del tema</string>
+    <string name="ajustes_color_sub">Elige el color principal de la interfaz</string>
+    <string name="ajustes_modo_oscuro">Modo oscuro</string>
+    <string name="ajustes_modo_oscuro_sub">Alternar tema oscuro</string>
+    <string name="ajustes_preferencias">Preferencias</string>
+    <string name="ajustes_presupuesto">Presupuesto mensual</string>
+    <string name="ajustes_presupuesto_sub">Límite máximo de gasto por mes</string>
+    <string name="hint_presupuesto">1000.00</string>
+    <string name="ajustes_notificaciones">Notificaciones</string>
+    <string name="ajustes_recordatorio">Recordatorio diario</string>
+    <string name="ajustes_recordatorio_sub">Te avisamos para registrar tus gastos</string>
+    <string name="ajustes_hora">Hora del recordatorio</string>
+    <string name="ajustes_hora_ejemplo">20:00</string>
+    <string name="ajustes_alerta">Alerta de presupuesto</string>
+    <string name="ajustes_alerta_sub">Avisar al llegar al 80% del presupuesto</string>
+    <string name="ajustes_almacenamiento">Almacenamiento</string>
+    <string name="ajustes_almacenamiento_sub">Dónde se guardan tus registros</string>
+    <string name="ajustes_sqlite">SQLite (base de datos local)</string>
+    <string name="ajustes_archivo">Archivo interno (JSON)</string>
+    <string name="ajustes_cuenta">Cuenta</string>
+    <string name="ajustes_cerrar_sesion">Cerrar sesión</string>
+    <string name="ajustes_version">Control de Gastos v1.0</string>
+    <string name="usuario_nombre_ejemplo">Usuario</string>
+    <string name="usuario_correo_ejemplo">usuario@ejemplo.com</string>
+
+    <!-- Datos de ejemplo para la vista previa de los items -->
+    <string name="item_descripcion_ejemplo">Supermercado</string>
+    <string name="item_detalle_ejemplo">Comida • 22 nov 2026</string>
+    <string name="item_monto_ejemplo">$120.00</string>
+    <string name="item_categoria_ejemplo">Comida</string>
+    <string name="item_porcentaje_ejemplo">45% del total</string>
+
+    <string-array name="categorias">
+        <item>Comida</item>
+        <item>Transporte</item>
+        <item>Entretenimiento</item>
+        <item>Servicios</item>
+        <item>Compras</item>
+        <item>Salud</item>
+        <item>Educación</item>
+        <item>Otros</item>
+    </string-array>
+
+    <string-array name="filtro_categorias">
+        <item>Todas</item>
+        <item>Comida</item>
+        <item>Transporte</item>
+        <item>Entretenimiento</item>
+        <item>Servicios</item>
+        <item>Compras</item>
+        <item>Salud</item>
+        <item>Educación</item>
+        <item>Otros</item>
+    </string-array>
+
+    <string-array name="meses">
+        <item>Enero</item>
+        <item>Febrero</item>
+        <item>Marzo</item>
+        <item>Abril</item>
+        <item>Mayo</item>
+        <item>Junio</item>
+        <item>Julio</item>
+        <item>Agosto</item>
+        <item>Septiembre</item>
+        <item>Octubre</item>
+        <item>Noviembre</item>
+        <item>Diciembre</item>
+    </string-array>
+</resources>
