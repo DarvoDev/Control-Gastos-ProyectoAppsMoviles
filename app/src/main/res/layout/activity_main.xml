@@ -158,8 +158,6 @@
 
                 </LinearLayout>
 
-                <!-- Accesos rápidos: lista completa y resumen -->
-
                 <!-- Encabezado de gastos recientes -->
                 <LinearLayout
                     android:layout_width="match_parent"
