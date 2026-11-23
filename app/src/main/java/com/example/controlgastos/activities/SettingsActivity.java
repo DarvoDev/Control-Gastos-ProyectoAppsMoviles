@@ -10,6 +10,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
 import com.example.controlgastos.R;
+import com.example.controlgastos.repository.RepositoryFactory;
 import com.example.controlgastos.utils.PrefsManager;
 
 
@@ -71,9 +72,9 @@ public class SettingsActivity extends AppCompatActivity {
     // Almanecaniento
     private void configurarAlmacenamiento(){
         RadioGroup rg = findViewById(R.id.rgAlmacenamiento);
-        rg.check("archivo".equals(prefs.getStorageMode()) ? R.id.rbArchivo : R.id.rbSqlite);
+        rg.check(RepositoryFactory.MODO_ARCHIVO.equals(prefs.getStorageMode()) ? R.id.rbArchivo : R.id.rbSqlite);
         rg.setOnCheckedChangeListener((grupo, idMarcado) ->{
-            prefs.setStorageMode(idMarcado == R.id.rbArchivo ? "archivo" : "sqlite");
+            prefs.setStorageMode(idMarcado == R.id.rbArchivo ? RepositoryFactory.MODO_ARCHIVO : RepositoryFactory.MODO_SQLITE);
             Toast.makeText(this, "Almacenamiento cambiado", Toast.LENGTH_SHORT).show();
         });
     }
