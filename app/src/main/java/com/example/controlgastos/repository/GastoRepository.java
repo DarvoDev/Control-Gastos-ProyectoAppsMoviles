@@ -10,21 +10,13 @@ import java.util.List;
  * (SqliteGastoRepository) o a un archivo JSON (ArchivoGastoRepository).
  * Se obtiene siempre con RepositoryFactory.get(context).
  *
+ * Los gastos solo se registran y se consultan: no se editan ni se eliminan.
  * Fechas siempre en formato yyyy-MM-dd.
  */
 public interface GastoRepository {
 
     /** Guarda un gasto nuevo. Regresa el id generado, o -1 si falló. */
     long insertar(Gasto gasto);
-
-    /** Actualiza un gasto existente (por gasto.id y gasto.userId). Regresa las filas afectadas. */
-    int actualizar(Gasto gasto);
-
-    /** Elimina el gasto solo si pertenece a ese usuario. Regresa las filas afectadas. */
-    int eliminar(long id, long userId);
-
-    /** Busca un gasto del usuario. Regresa null si no existe. */
-    Gasto obtenerPorId(long id, long userId);
 
     /**
      * Gastos del usuario, del más reciente al más antiguo.

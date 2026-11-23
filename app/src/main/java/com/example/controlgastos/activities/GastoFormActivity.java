@@ -14,9 +14,6 @@ import com.example.controlgastos.R;
  */
 public class GastoFormActivity extends AppCompatActivity {
 
-    // Extra del Intent con el id del gasto a editar. Si no viene, el formulario es para un gasto nuevo.
-    public static final String EXTRA_GASTO_ID = "gasto_id";
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

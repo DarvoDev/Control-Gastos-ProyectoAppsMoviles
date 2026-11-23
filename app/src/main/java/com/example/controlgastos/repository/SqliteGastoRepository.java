@@ -26,24 +26,6 @@ public class SqliteGastoRepository implements GastoRepository {
     }
 
     @Override
-    public int actualizar(Gasto gasto) {
-        // TODO Integrante 2: UPDATE con GastoDao
-        return 0;
-    }
-
-    @Override
-    public int eliminar(long id, long userId) {
-        // TODO Integrante 2: DELETE con GastoDao
-        return 0;
-    }
-
-    @Override
-    public Gasto obtenerPorId(long id, long userId) {
-        // TODO Integrante 2: SELECT por id con GastoDao
-        return null;
-    }
-
-    @Override
     public List<Gasto> listar(long userId, String desde, String hasta, String categoria) {
         // TODO Integrante 2: SELECT con filtros con GastoDao
         return new ArrayList<>();
