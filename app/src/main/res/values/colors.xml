@@ -14,9 +14,4 @@
 
     <!-- Colores principales disponibles para el selector de tema (Ajustes) -->
     <color name="tema_azul">#1565C0</color>
-    <color name="tema_verde_azulado">#00796B</color>
-    <color name="tema_indigo">#3949AB</color>
-    <color name="tema_verde">#2E7D32</color>
-    <color name="tema_naranja">#EF6C00</color>
-    <color name="tema_morado">#7B1FA2</color>
 </resources>
