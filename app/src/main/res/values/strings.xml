@@ -56,7 +56,6 @@
     <string name="etiqueta_fecha">Fecha</string>
     <string name="form_fecha_ejemplo">Hoy, 22 de noviembre</string>
     <string name="btn_guardar_gasto">Guardar gasto</string>
-    <string name="btn_eliminar_gasto">Eliminar gasto</string>
 
     <!-- Lista de gastos -->
     <string name="lista_titulo">Mis gastos</string>
@@ -143,4 +142,10 @@
     <string name="error_confirmar_distinta">Las contraseñas no coinciden</string>
     <string name="error_correo_repetido">Ya existe una cuenta con este correo</string>
     <string name="msg_cuenta_creada">Cuenta creada. ¡Bienvenido!</string>
+
+    <!-- Integrante 2: gastos -->
+    <string name="error_monto_invalido">Ingresa un monto mayor a 0</string>
+    <string name="error_guardar_gasto">No se pudo guardar el gasto</string>
+    <string name="msg_gasto_guardado">Gasto guardado</string>
+    <string name="sin_gastos_filtro">No hay gastos para este mes y categoría</string>
 </resources>

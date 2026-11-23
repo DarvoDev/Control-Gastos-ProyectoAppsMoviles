@@ -139,15 +139,6 @@
                 android:layout_marginTop="32dp"
                 android:text="@string/btn_guardar_gasto" />
 
-            <!-- Solo visible en modo edición -->
-            <Button
-                android:id="@+id/btnEliminar"
-                style="@style/BotonPrincipal"
-                android:layout_marginTop="@dimen/espacio_chico"
-                android:backgroundTint="@color/rojo"
-                android:text="@string/btn_eliminar_gasto"
-                android:visibility="gone" />
-
         </LinearLayout>
 
     </ScrollView>
