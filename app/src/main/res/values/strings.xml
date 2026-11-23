@@ -143,6 +143,24 @@
     <string name="error_correo_repetido">Ya existe una cuenta con este correo</string>
     <string name="msg_cuenta_creada">Cuenta creada. ¡Bienvenido!</string>
 
+    <!-- Integrante 4: dashboard y notificaciones -->
+    <string name="main_saludo_formato">Hola, %1$s</string>
+    <string name="main_restante_formato">%1$s restante</string>
+    <string name="main_excedido_formato">Excedido por %1$s</string>
+    <string name="main_presupuesto_formato">de %1$s</string>
+    <string name="main_sin_presupuesto">Sin presupuesto configurado</string>
+    <string name="notif_canal_nombre">Recordatorios y alertas</string>
+    <string name="notif_canal_desc">Alertas de presupuesto y recordatorio diario de gastos</string>
+    <string name="notif_alerta_titulo">Alerta de presupuesto</string>
+    <string name="notif_alerta_mensaje">Llevas %1$d%% de tu presupuesto mensual (%2$s de %3$s).</string>
+    <string name="notif_alerta_excedido_titulo">Presupuesto superado</string>
+    <string name="notif_alerta_excedido_mensaje">Superaste tu presupuesto mensual: %1$s de %2$s.</string>
+    <string name="notif_recordatorio_titulo">Registra tus gastos de hoy</string>
+    <string name="notif_recordatorio_mensaje">Mantén al día tu control de gastos del mes.</string>
+    <string name="permiso_notif_denegado">Sin permiso de notificaciones no podremos enviarte alertas ni recordatorios.</string>
+    <string name="msg_recordatorio_activado">Recordatorio diario activado (%1$s)</string>
+    <string name="msg_recordatorio_desactivado">Recordatorio diario desactivado</string>
+    <string name="msg_hora_recordatorio">Hora del recordatorio: %1$s</string>
     <!-- Integrante 2: gastos -->
     <string name="error_monto_invalido">Ingresa un monto mayor a 0</string>
     <string name="error_guardar_gasto">No se pudo guardar el gasto</string>
