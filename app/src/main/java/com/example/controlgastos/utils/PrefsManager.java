@@ -32,8 +32,18 @@ public class PrefsManager {
     public void setDarkMode(boolean b)  { prefs.edit().putBoolean("dark_mode", b).apply(); }
 
     // ---- Presupuesto mensual (0 = sin presupuesto definido) ----
-    public float getPresupuesto()          { return prefs.getFloat("presupuesto_mensual", 0f); }
-    public void setPresupuesto(float monto) { prefs.edit().putFloat("presupuesto_mensual", monto).apply(); }
+    // Cada usuario tiene su propio presupuesto: la clave lleva el id del usuario con sesión
+    // (ej. "presupuesto_mensual_3"). Así no se comparte entre cuentas del mismo teléfono.
+    private String clavePresupuesto() { return "presupuesto_mensual_" + getUserId(); }
+
+    public float getPresupuesto() {
+        return prefs.getFloat(clavePresupuesto(), 0f);
+    }
+
+    public void setPresupuesto(float monto) {
+        if (!isLoggedIn()) return; // sin sesión no hay a quién asignarle el presupuesto
+        prefs.edit().putFloat(clavePresupuesto(), monto).apply();
+    }
 
     // ---- Almacenamiento: "sqlite" o "archivo" ----
     public String getStorageMode()         { return prefs.getString("storage_mode", "sqlite"); }
