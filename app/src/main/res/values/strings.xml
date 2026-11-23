@@ -143,4 +143,13 @@
         <item>Noviembre</item>
         <item>Diciembre</item>
     </string-array>
+
+    <!-- ae: usuarios y sesión -->
+    <string name="error_campos_vacios">Completa todos los campos</string>
+    <string name="error_credenciales">Correo o contraseña incorrectos</string>
+    <string name="error_correo_invalido">Correo no válido</string>
+    <string name="error_contrasena_corta">La contraseña debe tener mínimo 6 caracteres</string>
+    <string name="error_confirmar_distinta">Las contraseñas no coinciden</string>
+    <string name="error_correo_repetido">Ya existe una cuenta con este correo</string>
+    <string name="msg_cuenta_creada">Cuenta creada. ¡Bienvenido!</string>
 </resources>
