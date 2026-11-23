@@ -58,7 +58,7 @@ public class LoginActivity extends AppCompatActivity {
         }
 
         // Login correcto: se guarda la sesión (aquí se crea el archivo de preferencias)
-        new PrefsManager(this).guardarSesion(usuario.id, usuario.nombre);
+        new PrefsManager(this).guardarSesion(usuario.id, usuario.nombre, usuario.email);
 
         // Abrir Main y vaciar la pila para que "Atrás" no regrese al login
         Intent intent = new Intent(this, MainActivity.class);

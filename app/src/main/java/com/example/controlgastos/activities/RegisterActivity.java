@@ -72,7 +72,7 @@ public class RegisterActivity extends AppCompatActivity {
         mensaje(R.string.msg_cuenta_creada);
         finish();
         /*// Registro correcto: se guarda la sesión para que el usuario entre directo
-        new PrefsManager(this).guardarSesion(id, nombre);
+        new PrefsManager(this).guardarSesion(id, nombre, correo);
         mensaje(R.string.msg_cuenta_creada);
 
         // Abrir Main y vaciar la pila (Login y Register ya no deben quedar atrás)

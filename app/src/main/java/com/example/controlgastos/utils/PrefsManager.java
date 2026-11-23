@@ -10,20 +10,22 @@ public class PrefsManager {
         prefs = context.getSharedPreferences("control_gastos_prefs", Context.MODE_PRIVATE);
     }
     // ---- Sesión ----
-    public void guardarSesion(long userId, String nombre) {
+    public void guardarSesion(long userId, String nombre, String email) {
         prefs.edit()
                 .putBoolean("logged_in", true)
                 .putLong("user_id", userId)
                 .putString("user_name", nombre)
+                .putString("user_email", email)
                 .apply();
     }
     //---------------------------valores por defecto--------------------------
     public boolean isLoggedIn()   { return prefs.getBoolean("logged_in", false); }
     public long getUserId()       { return prefs.getLong("user_id", -1); }
     public String getUserName()   { return prefs.getString("user_name", ""); }
+    public String getUserEmail()  { return prefs.getString("user_email", ""); }
 
     public void cerrarSesion() {
-        prefs.edit().remove("logged_in").remove("user_id").remove("user_name").apply();
+        prefs.edit().remove("logged_in").remove("user_id").remove("user_name").remove("user_email").apply();
     }
 
     public boolean isDarkMode()         { return prefs.getBoolean("dark_mode", false); }
