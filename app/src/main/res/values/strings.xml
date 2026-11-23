@@ -71,7 +71,7 @@
     <string name="ajustes_preferencias">Preferencias</string>
     <string name="ajustes_presupuesto">Presupuesto mensual</string>
     <string name="ajustes_presupuesto_sub">Límite máximo de gasto por mes</string>
-    <string name="hint_presupuesto">1000.00</string>
+    <string name="hint_presupuesto">Define aquí tu presupuesto</string>
     <string name="ajustes_notificaciones">Notificaciones</string>
     <string name="ajustes_recordatorio">Recordatorio diario</string>
     <string name="ajustes_recordatorio_sub">Te avisamos para registrar tus gastos</string>

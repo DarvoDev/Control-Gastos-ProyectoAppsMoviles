@@ -101,33 +101,6 @@
                 android:hint="@string/hint_confirmar"
                 android:inputType="textPassword" />
 
-            <!-- Aviso de privacidad -->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/espacio_medio"
-                android:background="@drawable/bg_chip"
-                android:gravity="center_vertical"
-                android:orientation="horizontal"
-                android:padding="12dp">
-
-                <ImageView
-                    android:layout_width="20dp"
-                    android:layout_height="20dp"
-                    android:contentDescription="@string/desc_icono"
-                    android:src="@drawable/ic_candado"
-                    app:tint="?attr/colorPrimary" />
-
-                <TextView
-                    style="@style/TextoSubtitulo"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="12dp"
-                    android:layout_weight="1"
-                    android:text="@string/registro_aviso" />
-
-            </LinearLayout>
-
             <Button
                 android:id="@+id/btnRegistrar"
                 style="@style/BotonPrincipal"
