@@ -159,4 +159,7 @@
     <string name="notif_recordatorio_titulo">Registra tus gastos de hoy</string>
     <string name="notif_recordatorio_mensaje">Mantén al día tu control de gastos del mes.</string>
     <string name="permiso_notif_denegado">Sin permiso de notificaciones no podremos enviarte alertas ni recordatorios.</string>
+    <string name="msg_recordatorio_activado">Recordatorio diario activado (%1$s)</string>
+    <string name="msg_recordatorio_desactivado">Recordatorio diario desactivado</string>
+    <string name="msg_hora_recordatorio">Hora del recordatorio: %1$s</string>
 </resources>

@@ -16,7 +16,7 @@ import androidx.core.content.ContextCompat;
 import com.example.controlgastos.R;
 import com.example.controlgastos.activities.MainActivity;
 import com.example.controlgastos.repository.GastoRepository;
-import com.example.controlgastos.repository.SqliteGastoRepository;
+import com.example.controlgastos.repository.RepositoryFactory;
 
 import java.text.NumberFormat;
 import java.util.Calendar;
@@ -127,8 +127,7 @@ public final class NotificationHelper {
         }
 
         String[] rango = rangoMesActual();
-        // TODO (Integrante 4): cambiar por RepositoryFactory.get(context) cuando la Integrante 3 lo suba.
-        GastoRepository repo = new SqliteGastoRepository(context);
+        GastoRepository repo = RepositoryFactory.get(context);
         double totalMes = repo.totalPeriodo(userId, rango[0], rango[1]);
 
         double proporcion = totalMes / presupuesto;

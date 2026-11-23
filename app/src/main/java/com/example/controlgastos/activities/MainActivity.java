@@ -23,7 +23,7 @@ import androidx.core.content.ContextCompat;
 import com.example.controlgastos.R;
 import com.example.controlgastos.models.Gasto;
 import com.example.controlgastos.repository.GastoRepository;
-import com.example.controlgastos.repository.SqliteGastoRepository;
+import com.example.controlgastos.repository.RepositoryFactory;
 import com.example.controlgastos.utils.NotificationHelper;
 import com.example.controlgastos.utils.PrefsManager;
 
@@ -137,8 +137,7 @@ public class MainActivity extends AppCompatActivity {
 
         // 3. Consultar total del mes y gastos recientes del usuario
         long userId = prefs.getUserId();
-        // TODO (Integrante 4): cambiar por RepositoryFactory.get(this) cuando la Integrante 3 lo suba.
-        GastoRepository repo = new SqliteGastoRepository(this);
+        GastoRepository repo = RepositoryFactory.get(this);
         double totalMes = repo.totalPeriodo(userId, desde, hasta);
         List<Gasto> gastosDelMes = repo.listar(userId, desde, hasta, null);
 
