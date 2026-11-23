@@ -47,10 +47,6 @@
             android:exported="false" />
 
         <activity
-            android:name=".activities.ResumenActivity"
-            android:exported="false" />
-
-        <activity
             android:name=".activities.SettingsActivity"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
