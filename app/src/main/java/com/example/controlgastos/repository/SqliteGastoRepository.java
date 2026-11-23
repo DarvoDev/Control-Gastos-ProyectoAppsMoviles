@@ -2,38 +2,36 @@ package com.example.controlgastos.repository;
 
 import android.content.Context;
 
+import com.example.controlgastos.database.GastoDao;
 import com.example.controlgastos.models.Gasto;
 
-import java.util.ArrayList;
 import java.util.List;
 
 /**
  * Implementación de GastoRepository con SQLite.
- * ESQUELETO: por ahora regresa valores vacíos para que el resto del equipo pueda compilar.
+ * No tiene SQL propio: delega en GastoDao. Su papel es cumplir el contrato GastoRepository
+ * para que las pantallas puedan usar SQLite o el archivo JSON sin saber cuál es.
  */
 public class SqliteGastoRepository implements GastoRepository {
 
-    private final Context context;
+    private final GastoDao dao;
 
     public SqliteGastoRepository(Context context) {
-        this.context = context.getApplicationContext();
+        dao = new GastoDao(context.getApplicationContext());
     }
 
     @Override
     public long insertar(Gasto gasto) {
-        // TODO Integrante 2: INSERT con GastoDao
-        return -1;
+        return dao.insertar(gasto);
     }
 
     @Override
     public List<Gasto> listar(long userId, String desde, String hasta, String categoria) {
-        // TODO Integrante 2: SELECT con filtros con GastoDao
-        return new ArrayList<>();
+        return dao.listar(userId, desde, hasta, categoria);
     }
 
     @Override
     public double totalPeriodo(long userId, String desde, String hasta) {
-        // TODO Integrante 2: SELECT SUM(monto) con GastoDao
-        return 0;
+        return dao.totalPeriodo(userId, desde, hasta);
     }
 }

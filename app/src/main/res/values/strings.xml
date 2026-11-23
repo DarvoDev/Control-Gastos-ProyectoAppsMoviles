@@ -56,7 +56,6 @@
     <string name="etiqueta_fecha">Fecha</string>
     <string name="form_fecha_ejemplo">Hoy, 22 de noviembre</string>
     <string name="btn_guardar_gasto">Guardar gasto</string>
-    <string name="btn_eliminar_gasto">Eliminar gasto</string>
 
     <!-- Lista de gastos -->
     <string name="lista_titulo">Mis gastos</string>
@@ -162,4 +161,9 @@
     <string name="msg_recordatorio_activado">Recordatorio diario activado (%1$s)</string>
     <string name="msg_recordatorio_desactivado">Recordatorio diario desactivado</string>
     <string name="msg_hora_recordatorio">Hora del recordatorio: %1$s</string>
+    <!-- Integrante 2: gastos -->
+    <string name="error_monto_invalido">Ingresa un monto mayor a 0</string>
+    <string name="error_guardar_gasto">No se pudo guardar el gasto</string>
+    <string name="msg_gasto_guardado">Gasto guardado</string>
+    <string name="sin_gastos_filtro">No hay gastos para este mes y categoría</string>
 </resources>
