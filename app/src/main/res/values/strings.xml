@@ -42,10 +42,6 @@
     <string name="main_monto_ejemplo">$850.00</string>
     <string name="main_restante_ejemplo">$150.00 restante</string>
     <string name="main_presupuesto_ejemplo">de $1,000.00</string>
-    <string name="main_ver_gastos">Mis gastos</string>
-    <string name="main_ver_gastos_sub">Lista completa</string>
-    <string name="main_resumen">Resumen</string>
-    <string name="main_resumen_sub">Por categoría</string>
     <string name="main_recientes">Gastos recientes</string>
     <string name="main_ver_todos">Ver todos</string>
     <string name="sin_gastos">Aún no tienes gastos registrados</string>
@@ -67,15 +63,10 @@
     <string name="etiqueta_mes">Mes</string>
     <string name="lista_total">Total</string>
 
-    <!-- Resumen -->
-    <string name="resumen_titulo">Resumen por categoría</string>
-    <string name="resumen_total">Total gastado</string>
 
     <!-- Ajustes -->
     <string name="ajustes_titulo">Configuración</string>
     <string name="ajustes_apariencia">Apariencia</string>
-    <string name="ajustes_color">Color del tema</string>
-    <string name="ajustes_color_sub">Elige el color principal de la interfaz</string>
     <string name="ajustes_modo_oscuro">Modo oscuro</string>
     <string name="ajustes_modo_oscuro_sub">Alternar tema oscuro</string>
     <string name="ajustes_preferencias">Preferencias</string>
