@@ -100,7 +100,8 @@ public class SettingsActivity extends AppCompatActivity {
         TextView txtNombre = findViewById(R.id.txtNombreUsuario);
         txtNombre.setText(prefs.getUserName());
 
-        // TODO: txtCorreoUsuario
+        TextView txtCorreo = findViewById(R.id.txtCorreoUsuario);
+        txtCorreo.setText(prefs.getUserEmail());
 
         findViewById(R.id.btnCerrarSesion).setOnClickListener(v -> {
             prefs.cerrarSesion();
